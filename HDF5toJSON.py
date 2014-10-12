@@ -58,6 +58,7 @@ class converter:
 
 			for gp in h5file.list_nodes(group, classname="Group"):
 				gp_name = gp._v_name
+				self.groupContentsDict[gp_name] = {}
 				gp_contents = {gp_name : self.groupContentsDict[gp_name]}
 				self.groupContentsDict[name].update(gp_contents)
 
